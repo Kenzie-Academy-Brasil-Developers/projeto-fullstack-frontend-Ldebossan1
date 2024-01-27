@@ -41,7 +41,7 @@ export const ContactProvider = ({ children }: icontactProviderProps) => {
       const res = await api.get(`/users/${user.id}`);
       localStorage.setItem('@USER', JSON.stringify(res.data));
       setUser(res.data);
-      toast.success('Contato criado com sucesso');
+      toast.success('Contact created successfully');
       toggleContactModal();
     } catch (error) {
       const currentError = error as AxiosError<any>;
@@ -55,7 +55,7 @@ export const ContactProvider = ({ children }: icontactProviderProps) => {
       const res = await api.get(`/users/${user.id}`);
       localStorage.setItem('@USER', JSON.stringify(res.data));
       setUser(res.data);
-      toast.success('Contato atualizado com sucesso');
+      toast.success('Contact updated sucessfully');
       toggleEditContactModal();
     } catch (error) {
       const currentError = error as AxiosError<any>;
@@ -69,7 +69,7 @@ export const ContactProvider = ({ children }: icontactProviderProps) => {
       const res = await api.get(`/users/${user.id}`);
       localStorage.setItem('@USER', JSON.stringify(res.data));
       setUser(res.data);
-      toast.success('Contato deletado com sucesso');
+      toast.success('Contact deleted sucessfully');
       toggleEditContactModal();
     } catch (error) {
       const currentError = error as AxiosError<any>;

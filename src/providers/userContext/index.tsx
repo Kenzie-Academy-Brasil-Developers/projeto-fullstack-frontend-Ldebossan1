@@ -80,7 +80,7 @@ import React, {
     const userRegister = async (data: RegisterData) => {
       try {
         await api.post<iUser>('/users', data);
-        toast.success('Conta criada com sucesso');
+        toast.success('Account created successfully');
         toggleModal();
       } catch (error) {
         const currentError = error as AxiosError<any>;
@@ -104,7 +104,7 @@ import React, {
         setUser(loggedUser);
         setUpdatedUser(loggedUser);
   
-        toast.success('Login feito com sucesso.');
+        toast.success('Login sucessfully');
         navigate('/Dashboard');
       } catch (error) {
         const currentError = error as AxiosError<any>;
@@ -128,7 +128,7 @@ import React, {
           localStorage.setItem('@USER', JSON.stringify(res.data));
           setUpdatedUser(res.data);
         }
-        toast.success('Perfil atualizado com sucesso');
+        toast.success('Profile updated successfully');
         toggleModal();
       } catch (error) {
         const currentError = error as AxiosError<any>;
@@ -139,7 +139,7 @@ import React, {
     const userDelete = async () => {
       try {
         await api.delete(`/users/${user.id}`);
-        toast.warning('Perfil deletado com sucesso');
+        toast.warning('Profile deleted sucessfully');
         toggleModal();
         logOff();
       } catch (error) {

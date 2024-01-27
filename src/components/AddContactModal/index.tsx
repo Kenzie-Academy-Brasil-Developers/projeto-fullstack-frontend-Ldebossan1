@@ -27,7 +27,7 @@ const AddContactModal = ({ toggleContactModal }: AddContactModalProps) => {
     <Modal toggleModal={toggleContactModal}>
       <StyledContent>
         <div>
-          <h2>Criar contato</h2>
+          <h2>Add contact</h2>
           <Button
             type={'button'}
             buttonVariation={'closeModal'}
@@ -41,9 +41,9 @@ const AddContactModal = ({ toggleContactModal }: AddContactModalProps) => {
             id={'nameEditProfile'}
             type={'text'}
             disabled={false}
-            label={'Nome'}
+            label={'Name'}
             required={true}
-            placeholder={'Digite o nome'}
+            placeholder={'Contact name'}
             register={register('name')}
           />
           {errors.name?.message && (
@@ -57,7 +57,7 @@ const AddContactModal = ({ toggleContactModal }: AddContactModalProps) => {
             disabled={false}
             label={'Email'}
             required={true}
-            placeholder={'Digite o email'}
+            placeholder={'Contact email'}
             register={register('email')}
           />
           {errors.email?.message && (
@@ -69,9 +69,9 @@ const AddContactModal = ({ toggleContactModal }: AddContactModalProps) => {
             id={'phoneEditProfile'}
             type={'tel'}
             disabled={false}
-            label={'Telefone'}
+            label={'Telephone'}
             required={true}
-            placeholder={'Digite o telefone'}
+            placeholder={'Contact telephone'}
             register={register('phone')}
           />
           {errors.phone?.message && (
@@ -79,7 +79,7 @@ const AddContactModal = ({ toggleContactModal }: AddContactModalProps) => {
           )}
 
           <Button type={'submit'} buttonVariation={'login'}>
-            Criar contato
+            Create contact
           </Button>
         </form>
       </StyledContent>
